@@ -77,5 +77,36 @@ func main() {
 	fmt.Println(s1, s3)
 
 	// 4.3 Map
+	// no suprise:)
+	// delete(map, key)
+	// function pass map reference by value
 
+	// 5.1 user defined types
+	// TYPE I
+	type user struct { // type auto aligned!
+		name         string // types are identifier, so ";" is inserted at EOL
+		email        string
+		ext          int
+		verylongname bool
+	}
+
+	// line break rule: https://go101.org/article/line-break-rules.html
+	lisalisa := user{
+		name:  "LisaLisa",       // comma required
+		email: "jojo@gmail.com", // comma required, otherwise a ";" is added...
+	} // This is a composite literal!
+
+	lilith := user{
+		"Lilith",
+		"SERN@gmail.com",
+		11,
+		true} // no need for comma!! usually in one line
+	fmt.Println(lisalisa, lilith)
+
+	// TYPE II
+	type Duration int64
+	var dur Duration
+	// dur = int64(1000) // not compile
+	dur = Duration(int64(1000))
+	fmt.Println(dur)
 }
