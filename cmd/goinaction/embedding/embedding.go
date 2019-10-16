@@ -1,18 +1,16 @@
 // this package demonstrate embedding and export
 package main
 
-// import "fmt"
-
 import (
 	"github.com/jzpin/learn/pkg/entities"
 )
 
 type notifier interface {
-	notify()
+	Notify()
 }
 
 func sendNotification(u notifier) {
-	u.notify()
+	u.Notify()
 }
 
 type admin struct {

@@ -8,9 +8,9 @@ type User struct {
 	Email string
 }
 
-// implement for *user type
+// Notify implement for *user type
 // if a function is defined for pointer, it means the func intends to modify item
 // as a result, it can only be used with &item
-func (u *User) notify() {
+func (u *User) Notify() {
 	fmt.Printf("Send email to %s <%s>\n", u.Name, u.Email)
 }
